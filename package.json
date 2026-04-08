@@ -1,0 +1,20 @@
+{
+	"repository": {
+		"type": "git",
+		"url": "git+git@github.com:up2dul/siaplulus.git"
+	},
+	"author": {
+		"email": "up2dul@gmail.com",
+		"name": "Abdul"
+	},
+	"scripts": {
+		"prepare": "lefthook install"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.5.0",
+		"@commitlint/config-conventional": "^20.5.0",
+		"@commitlint/types": "^20.5.0",
+		"lefthook": "^2.1.5"
+	},
+	"packageManager": "pnpm@10.27.0"
+}
