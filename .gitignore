@@ -12,3 +12,6 @@ __pycache__/
 *.pyc
 logs/
 .env
+
+# Generated — run `moon run core:generate` to create
+packages/core/src/schema.d.ts
