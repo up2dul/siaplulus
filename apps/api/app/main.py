@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from loguru import logger
 from scalar_fastapi import get_scalar_api_reference
 
+from app.api.auth.router import router as auth_router
+
 app = FastAPI()
 
 
@@ -13,6 +15,9 @@ async def startup():
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+app.include_router(auth_router)
 
 
 @app.get("/scalar", include_in_schema=False)
