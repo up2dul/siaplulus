@@ -7,7 +7,9 @@ System prompt for LLM agents (Cursor, Copilot, Claude, etc.) helping with this c
 ## Stack
 
 **Backend**: FastAPI, SQLAlchemy, Alembic, Celery, PostgreSQL, Redis
+
 **Frontend**: React 19, TanStack Router/Query/Table, Tailwind CSS v4, shadcn/ui
+
 **Shared**: Type-safe API client (`@repo/core`) — auto-generated from OpenAPI schema
 
 ---
@@ -103,11 +105,13 @@ packages/core/src/
 7. Import model in `alembic/env.py`
 
 **Shared**:
+
 8. Run `moon run core:generate` to regenerate `schema.d.ts`
 9. Create `packages/core/src/api/{feature}.ts` — typed API methods
 10. Attach to the main api object in `packages/core/src/index.ts`
 
 **Frontend**:
+
 11. Create `apps/web/src/modules/{feature}/hooks/use-{feature}.ts` — TanStack Query hooks
 12. Create `apps/web/src/modules/{feature}/components/` — UI components
 13. Create `apps/web/src/routes/{feature}.tsx` — route file
