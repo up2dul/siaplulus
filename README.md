@@ -48,33 +48,38 @@ Proto will handle Node.js, pnpm, Python, and Moon based on `.prototools`.
 
 ## Getting Started
 
-```bash
-# Clone the repo
-git clone https://github.com/your-org/my-project.git
-cd my-project
+### Clone the repo
 
-# Install JS dependencies and set up Git hooks
+```bash
+git clone https://github.com/up2dul/siaplulus.git
+
+# Or if you have SSH access
+git clone git@github.com:up2dul/siaplulus.git
+```
+
+### Move into the project directory
+
+```bash
+cd siaplulus
+```
+
+### Install dependencies and set up Git hooks
+
+```bash
+# Install JS dependencies
 pnpm install
 
 # Install Python dependencies
 uv sync --project apps/api
-
-# Set up environment variables
-cp apps/api/.env.example apps/api/.env
-# Edit apps/api/.env with your values
-
-# Generate TypeScript types from the backend schema (API must be running)
-moon run api:dev
-moon run core:generate
 ```
 
 ## Running the Project
 
 ```bash
-# Start the frontend dev server (http://localhost:3000)
+# Start the frontend dev server
 moon run web:dev
 
-# Start the backend dev server (http://localhost:8000)
+# Start the backend dev server
 moon run api:dev
 
 # Start both simultaneously
@@ -83,6 +88,8 @@ moon run web:dev api:dev
 # Start the Celery worker
 moon run api:worker
 ```
+
+The frontend runs at `http://localhost:3000` and the backend at `http://localhost:8000`.  
 
 API docs are available at `http://localhost:8000/scalar`.
 
