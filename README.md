@@ -64,7 +64,7 @@ cp apps/api/.env.example apps/api/.env
 # Edit apps/api/.env with your values
 
 # Generate TypeScript types from the backend schema (API must be running)
-moon run api:dev &
+moon run api:dev
 moon run core:generate
 ```
 
@@ -245,8 +245,8 @@ This project enforces [Conventional Commits](https://www.conventionalcommits.org
 Valid types: `feat` `fix` `docs` `style` `refactor` `perf` `test` `chore` `revert` `ci`
 
 ```bash
-git commit -m "feat(auth): add JWT refresh token"
-git commit -m "fix(api): resolve null pointer in user endpoint"
+git commit -m "feat(web/auth): add JWT refresh token"
+git commit -m "fix(api/users): resolve null pointer in user endpoint"
 git commit -m "chore: bump dependencies"
 ```
 
